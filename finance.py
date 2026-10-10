@@ -33,7 +33,7 @@ import pandas as pd
 
 ZERO = Decimal("0")
 CENT = Decimal("0.01")
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent  
 DUE_SOON_DAYS = 7
 # Opening balance of the fictional business before the first sample transaction.
 DEFAULT_OPENING_BALANCE = Decimal("124300")
