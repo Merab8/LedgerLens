@@ -11,10 +11,13 @@ An AI financial copilot that helps small businesses understand their cash positi
 ![Groq](https://img.shields.io/badge/Inference-Groq-f55036)
 ![ngrok](https://img.shields.io/badge/Shared%20via-ngrok-1F1E37?logo=ngrok&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://finora-hklkp32xqjhcs6wyecfbkr.streamlit.app)
 ![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-Islamabad%202026-ff6b00)
 
 **Hacktoberfest Islamabad 2026 · Open AI Build Challenge**
 Domain: **05 – Business & Productivity**
+
+### 🌐 [**Try the Live Demo →**](https://finora-hklkp32xqjhcs6wyecfbkr.streamlit.app)
 
 </div>
 
@@ -24,16 +27,27 @@ Domain: **05 – Business & Productivity**
 
 ## 📑 Table of Contents
 
-1. [Problem](#-problem)
-2. [Solution](#-solution)
-3. [AI Component](#-ai-component)
-4. [Architecture](#-architecture)
-5. [Tech Stack](#-tech-stack)
-6. [Setup](#-setup)
-7. [Demo](#-demo)
-8. [Team](#-team)
-9. [License](#-license)
-10. [Acknowledgements](#-acknowledgements)
+1. [Live Demo](#-live-demo)
+2. [Problem](#-problem)
+3. [Solution](#-solution)
+4. [AI Component](#-ai-component)
+5. [Architecture](#-architecture)
+6. [Tech Stack](#-tech-stack)
+7. [Setup](#-setup)
+8. [Demo](#-demo)
+9. [Team](#-team)
+10. [License](#-license)
+11. [Acknowledgements](#-acknowledgements)
+
+---
+
+## 🌐 Live Demo
+
+The app is deployed on Streamlit and open to everyone, no installation needed:
+
+**👉 https://finora-hklkp32xqjhcs6wyecfbkr.streamlit.app**
+
+> The live app runs in demo mode with simulated data, so you can safely click around, run what-if scenarios and chat with the copilot.
 
 ---
 
@@ -117,46 +131,14 @@ flowchart TD
 - A free **Groq API key** from [console.groq.com](https://console.groq.com)
 - An **ngrok** account and its auth token (only for sharing the demo publicly)
 
-### 1. Create a virtual environment
+> Don't want to install anything? Just use the [live demo](https://finora-hklkp32xqjhcs6wyecfbkr.streamlit.app).
 
-```bash
-python3.14 -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Add your keys
-
-Create a `.env` file in the project folder. Never upload this file publicly.
-
-```env
-GROQ_API_KEY=your_groq_api_key_here
-NGROK_API_KEY=your_ngrok_key_here
-```
-
-### 4. Run the app
-
-```bash
-python app.py
-```
-
-### 5. Share it publicly with ngrok
-
-```bash
-ngrok config add-authtoken <YOUR_NGROK_KEY>
-ngrok http 8501
-```
-
-ngrok prints a public `https://...ngrok-free.app` link that anyone can open from any device.
 
 > 🔐 **No secrets are stored in this repository.** Keys are loaded from environment variables only.
 
 ## 🎬 Demo
+
+Open the [live app](https://finora-hklkp32xqjhcs6wyecfbkr.streamlit.app) and try this:
 
 1. Open the **Overview** tab and read the current position: PKR 200,000 cash, lowest projected balance PKR 71,000 on 26 Oct.
 2. Open **AI Financial Copilot** and click *Explain my current cash-flow position.*
