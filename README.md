@@ -8,7 +8,8 @@ An AI financial copilot that helps small businesses understand their cash positi
 
 ![Python](https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white)
 ![Model](https://img.shields.io/badge/Model-gpt--oss--120b%20(open--weight)-10a37f)
-![ngrok](https://img.shields.io/badge/Served%20via-ngrok-1F1E37?logo=ngrok&logoColor=white)
+![Groq](https://img.shields.io/badge/Inference-Groq-f55036)
+![ngrok](https://img.shields.io/badge/Shared%20via-ngrok-1F1E37?logo=ngrok&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-Islamabad%202026-ff6b00)
 
@@ -74,8 +75,8 @@ Wrong answers lead to cash shortfalls, late supplier payments and decisions made
 | Item | Details |
 |---|---|
 | **Model** | `openai/gpt-oss-120b`, an **open-weight** large language model released under the Apache-2.0 license |
-| **Access** | The model is reached through an API endpoint exposed with **ngrok**, authenticated with an **ngrok key** |
-| **AI agent** | A financial copilot agent receives the figures calculated by the app (current cash, obligations, receivables, daily cash movements, what-if results) and turns them into a clear explanation with risks and assumptions. It also answers follow-up questions in the chat. |
+| **Inference** | The model runs through the **Groq API** (fast hosted inference of the open-weight model), authenticated with a Groq API key |
+| **AI agent** | A financial copilot agent (powered by the model above) receives the figures calculated by the app (current cash, obligations, receivables, daily cash movements, what-if results) and turns them into a clear explanation with risks and assumptions. It also answers follow-up questions in the chat. |
 | **Guardrails** | The agent may only use figures provided by the app. Overdue receivables are excluded from projections and every assumption is stated openly. |
 
 ### Why AI is important here
@@ -90,11 +91,11 @@ flowchart TD
     B -->|verified figures| C[AI Financial Copilot agent<br/>gpt-oss-120b]
     C --> D[Web dashboard<br/>Overview, Transactions, Bills, What-If, Copilot]
     B --> D
-    E[ngrok tunnel + key] -.->|exposes the model API<br/>and shares the demo| C
-    E -.-> D
+    G[Groq API] <-->|prompt / response| C
+    E[ngrok tunnel] -.->|public demo link| D
 ```
 
-**In short:** data goes into the cash-flow logic, the app calculates all numbers, the agent explains them in simple language, and ngrok makes the model endpoint and the live demo reachable over a public HTTPS URL.
+**In short:** data goes into the cash-flow logic, the app calculates all numbers, the agent (gpt-oss-120b on Groq) explains them in simple language, and ngrok makes the live demo reachable over a public HTTPS URL.
 
 ## 🛠️ Tech Stack
 
@@ -103,7 +104,8 @@ flowchart TD
 | Language | Python **3.14** |
 | AI model | `openai/gpt-oss-120b` (open-weight) |
 | AI agent | Prompt-driven financial copilot agent |
-| API access and sharing | **ngrok** (public HTTPS tunnel, authenticated with an ngrok key) |
+| Inference API | **Groq API** |
+| Sharing | **ngrok** (public HTTPS tunnel for the live demo) |
 | Interface | Interactive web dashboard with tabs, controls and chat input |
 | Data | Simulated PKR dataset for a fictional business |
 
@@ -112,7 +114,8 @@ flowchart TD
 ### Prerequisites
 
 - Python **3.14**
-- An **ngrok** account and its key (auth token)
+- A free **Groq API key** from [console.groq.com](https://console.groq.com)
+- An **ngrok** account and its auth token (only for sharing the demo publicly)
 
 ### 1. Create a virtual environment
 
@@ -127,11 +130,12 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3. Add your ngrok key
+### 3. Add your keys
 
 Create a `.env` file in the project folder. Never upload this file publicly.
 
 ```env
+GROQ_API_KEY=your_groq_api_key_here
 NGROK_API_KEY=your_ngrok_key_here
 ```
 
@@ -165,7 +169,7 @@ ngrok prints a public `https://...ngrok-free.app` link that anyone can open from
 
 | Member | Role and contributions |
 |---|---|
-| **Merab Butt** | AI agent and integration: copilot agent design, prompt and guardrails, model API access through ngrok. |
+| **Merab Butt** | AI agent and integration: copilot agent design, prompt and guardrails, model integration through Groq, and ngrok demo sharing. |
 | **Ayesha Hassan** | Cash-flow logic: current cash, net flow, day-by-day projection, what-if simulator and simulated data. |
 | **Fatima Zahra** | Interface and testing: dashboard tabs, result presentation, demo flow, scenario and edge-case testing. |
 
@@ -178,6 +182,7 @@ Released under the **MIT License**. See the [LICENSE](LICENSE) file.
 ## 🙏 Acknowledgements
 
 - [OpenAI gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b): open-weight model (Apache-2.0)
+- [Groq](https://groq.com): fast inference API
 - [ngrok](https://ngrok.com): secure tunneling
 - Python 3.14 and the open-source libraries listed in `requirements.txt`
 - **Hacktoberfest Islamabad 2026**, powered by MLH and organized by CNCF Islamabad
