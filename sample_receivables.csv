@@ -1,0 +1,6 @@
+id,description,counterparty,amount,day_offset,payment_status
+R001,Invoice INV-1012 - office supplies,Bright Schools,45000,4,Pending
+R002,Invoice INV-1013 - bulk stationery,Alpha Traders,70000,8,Pending
+R003,Invoice INV-1014 - toner order,City Clinic,55000,18,Pending
+R004,Invoice INV-1009 balance (late),Green Valley School,30000,-5,Pending
+R005,Invoice INV-1008,City Clinic,87000,-12,Received

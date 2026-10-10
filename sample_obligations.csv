@@ -1,0 +1,9 @@
+id,description,category,amount,day_offset,payment_status,counterparty
+O001,Electricity bill,Utilities,18500,-3,Unpaid,Fictional Power Co.
+O002,Supplier payment - paper stock,Supplier Purchases,65000,3,Unpaid,Paper Mills Co.
+O003,Staff payroll,Payroll,85000,5,Unpaid,Staff
+O004,Office rent,Rent,60000,16,Unpaid,Fictional Plaza Landlord
+O005,Internet and phone,Utilities,6500,12,Unpaid,NetLink
+O006,Packaging materials,Supplier Purchases,14500,-38,Paid,PackRight
+O007,Accounting software,Software,9000,14,Unpaid,LedgerSoft
+O008,Supplier payment - toner,Supplier Purchases,40000,20,Unpaid,InkWorld

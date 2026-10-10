@@ -1,0 +1,33 @@
+id,day_offset,description,category,type,amount,status,counterparty,notes
+T001,-58,Sales invoice INV-1001,Sales,income,92000,Completed,Alpha Traders,
+T002,-57,Paper stock purchase,Supplier Purchases,expense,48000,Completed,Paper Mills Co.,
+T003,-55,Staff payroll,Payroll,expense,85000,Completed,Staff,Monthly payroll
+T004,-54,Office rent,Rent,expense,60000,Completed,Fictional Plaza Landlord,
+T005,-52,Sales invoice INV-1002,Sales,income,64000,Completed,Bright Schools,
+T006,-50,Electricity bill,Utilities,expense,17200,Completed,Fictional Power Co.,
+T007,-49,Internet and phone,Utilities,expense,6500,Completed,NetLink,
+T008,-47,Accounting software,Software,expense,9000,Completed,LedgerSoft,Monthly subscription
+T009,-45,Sales invoice INV-1003,Sales,income,38000,Completed,City Clinic,
+T010,-44,Stationery stock,Supplier Purchases,expense,31000,Completed,Paper Mills Co.,
+T011,-42,Delivery fuel,Transport,expense,7800,Completed,,
+T012,-40,Sales invoice INV-1004,Sales,income,110000,Completed,Alpha Traders,
+T013,-38,Packaging materials,Supplier Purchases,expense,14500,Completed,PackRight,Settles obligation O006
+T014,-35,Staff payroll,Payroll,expense,85000,Completed,Staff,Monthly payroll
+T015,-34,Office rent,Rent,expense,60000,Completed,Fictional Plaza Landlord,
+T016,-33,Sales invoice INV-1005,Sales,income,72000,Completed,Bright Schools,
+T017,-31,Electricity bill,Utilities,expense,16400,Completed,Fictional Power Co.,
+T018,-30,Internet and phone,Utilities,expense,6500,Completed,NetLink,
+T019,-28,Printer repair,Maintenance,expense,5200,Completed,FixIt Services,
+T020,-26,Sales invoice INV-1006,Sales,income,55000,Completed,Green Valley School,
+T021,-25,Toner and ink stock,Supplier Purchases,expense,36000,Completed,InkWorld,
+T022,-23,Accounting software,Software,expense,9000,Completed,LedgerSoft,Monthly subscription
+T023,-21,Sales invoice INV-1007,Sales,income,98000,Completed,Alpha Traders,
+T024,-18,Delivery fuel,Transport,expense,8200,Completed,,
+T025,-15,Staff payroll,Payroll,expense,85000,Completed,Staff,Monthly payroll
+T026,-14,Office rent,Rent,expense,60000,Completed,Fictional Plaza Landlord,
+T027,-12,Sales invoice INV-1008,Sales,income,87000,Completed,City Clinic,Settles receivable R005
+T028,-10,Marketing flyers,Marketing,expense,12000,Completed,PrintPoint,
+T029,-8,Sales invoice INV-1009,Sales,income,46000,Completed,Bright Schools,
+T030,-5,Sales invoice INV-1010,Sales,income,61000,Completed,Green Valley School,
+T031,-3,Stationery stock,Supplier Purchases,expense,24000,Completed,Paper Mills Co.,
+T032,-2,Sales invoice INV-1011,Sales,income,39000,Completed,Alpha Traders,
